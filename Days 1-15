@@ -272,7 +272,7 @@ case “sunny”:
 default
 	print(“enjoy”)
 }
-//use fall through to continue execution to next case
+//use fallthrough to continue execution to next case
 
 //Range Operators
 Import UIKit
