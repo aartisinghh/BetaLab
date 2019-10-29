@@ -1,0 +1,330 @@
+//Day 1: Variables
+//places where you can store program data
+
+//: Playground - noun: a place where people can play
+
+Import UIKit
+
+var str = “Hello, playground”
+Str = “goodbye”
+
+//Strings and Integers
+Import UIKit
+
+var age = 38
+var population = 8_000_000
+
+//Multi-line Strings
+Import UIKit
+
+var str1 = “””
+This goes 
+Over multiple lines
+“””
+///quote marks must be on their own line
+
+var str2 = “””
+This goes \
+Over multiple \
+Lines
+“””
+//backslash for lines
+
+//Doubles and Booleans
+Import UIKit
+
+var pi = 3.141 
+//automatically knows its a double
+var awesome = true 
+// true is keyword, automatically knows
+
+//String Interpolation
+//placing variables in strings
+
+Import UIKit
+
+var score = 85
+var str = “Your score was \(score)”
+Var results = “the tests results are here: \(str)”
+//using /() and variable name inside
+
+//Constants
+Import UIKit
+//alternative for var is let, which is a constant and doesn’t change, unlike var
+
+let taylor = “swift”
+
+Day 7: Type Annotations
+Import UIKit
+
+let str = “Hello, playground”
+
+//assigning variable a type
+let album: String = “Reputation”
+let year: Int = 1989
+Let taylorRocks: Bool = true
+
+//Simple Types (summary)
+//make variables with var and constants with let
+//try to use constants more
+//strings start and end with double quotes, unless you need multiple lines, then use 3 quotes
+//ints hold whole numbers, double holds fractional numbers and booleans hold t/f
+//you can put variables or constants in strings
+// you can provide a type to your variable
+
+//Day 2: Complex Data types
+//Arrays
+Import UIKit
+
+let j = “Jon”
+let p = “Paul”
+let g = “George”
+let r = “ringo”
+
+let beatles = [j, p, g, r]
+//stores in array
+beatles[1]
+// will output Jon
+
+//Sets
+Import UIKit
+//in sets, items aren’t in order and they do not appear twice
+
+let colours = Set([“red, “green, “blue”])
+//set is keyword
+
+//Tuples
+Import UIKit
+//like dictionaries in python
+//item with a value
+//tuples are fixed
+
+var name = (first: “Taylor”, last “Swift”)
+name.0 
+name.first
+//both return Taylor
+
+//Arrays vs Sets vs Tuples
+Import UIKit
+//use tuples when collection  of values are fixed to items
+//items that must be unique, use sets
+//items with duplicates, or if order matters use arrays
+
+//Dictionaries
+//are like tuples, but can assign values with anything you want, like strings
+Import UIKit
+
+let heights = [
+	“Taylor Swift”: 1.78,
+	“Ed Sheeran”: 1.73
+]
+
+heights[“Taylor Swift”]
+//output 1.78
+
+//Dictionary Default Values
+Import UIKit
+
+let favIceCream = [
+	“Paul”: “Chocolate”,
+	“Sophie”: “Vanilla”
+]
+
+favIceCream[“Paul”] //outputs chocolate
+favIceCream[“Charlotte”, default: “Unknown”]
+//since there is no Charlotte, the default will produce “Unknown” rather than nil
+//like error handling
+
+//Creating empty collections
+//empty dictionaries and arrays have different syntax than sets
+Import UIKit
+
+var teams = [String: String]()
+teams[“Paul”] = “Red”
+//empty dictionary
+
+var results = [Int]()
+//empty array
+
+var words = Set<String>()
+var numbers = Set<Int>()
+//empty set
+
+//Enumerations
+Import UIKit
+//can define a variable type that be either be a success or failure
+
+Enum result {
+	case success
+	case failure
+}
+//enum and case are keywords
+
+Let result4 = result.failure
+
+//Enum associated values
+Import UIKit
+enum Activity{
+	case running
+	case talking
+	case singing
+}
+
+//can add additional detail
+
+enum Activity{
+	case running(destination: String)
+	case talking(topic: String)
+	case singing(volume: Int)
+}
+
+Let talking = Activity.talking(topic: “football”)
+
+//Enum Raw Values
+//enum assigns numbers to values starting from 0, which are raw values, but you can indicate where you want to start
+Import UIKit
+
+enum Planet: Int {
+	case mercury = 1
+	case Venus
+	case earth
+}
+
+//now mercury will be 1 and enum will count upwards from there, assigning Venus 2 and earth 3
+
+//Day 3: Operators and Conditionals
+//Arithmetic Operators
+
+//+ = add
+//- = subtract
+* = multiply
+// / = divide
+// % = gets remainder
+
+//Operator Overloading
+// + can add strings and collections
+Import UIKit
+
+let first = [“first half”]
+let second = [“second half”]
+let all = first + second
+//output [“first half”, “second half”]
+
+//Compound Assignment operators 
+//using operators but with an equal sign at the end
+
+Import UIKit
+var score = 95
+score -= 5
+
+var quote = “Hello”
+quote += “world”
+
+//Comparison Operators
+// == — checking if two values are the same
+/ != — if they don’t equal
+// < — less
+// > — greater
+// <= — less or equal to
+// >= — greater or equal to
+
+//Conditions
+Import UIKit
+
+Le first = 11
+Let second = 10
+
+If first + second == 2{
+	print(“lucky”)
+} else if first + second == 21 {
+	print(“blackjack”)
+}else {
+	print(“regular”)
+}
+
+// Combining Conditions
+// Use && and ||
+//like in java
+
+//The ternary operator
+//works with 3 values at once
+//uses question mark and colon
+
+Import UIKit
+Let first = 11
+Let second = 10
+print(first == second ? “Cards are same” : “cards are different”)
+//outputs cars are different
+
+
+//Switch statements
+// use if there are several if and else statements
+Import UIKit
+let weather = “sunny”
+
+switch weather {
+case “rain”:
+	print(“umbrella”)
+case “snow”
+	print(“dress warm”)
+case “sunny”:
+	print(“sunglasses”)
+default
+	print(“enjoy”)
+}
+//use fall through to continue execution to next case
+
+//Range Operators
+Import UIKit
+// … makes a range up to and including the number
+//..< makes range up to but not including the number
+
+let score = 0...50
+let score2 = 50..<101
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
