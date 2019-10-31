@@ -282,6 +282,36 @@ Import UIKit
 let score = 0...50
 let score2 = 50..<101
 
+//Day 4: Loops
+
+//For-Loops
+Import UIKit
+
+count = 1...10;
+
+for number in count{
+	print("Number is \(number)"
+}
+//can even use an underscore instead of constant
+for _ in count{
+	print("Number is \(number)"
+}
+
+//While Loops
+Import UIKit
+
+var number = 1;
+
+while number <= 20 {
+	print(number)
+	number += 1
+}
+
+//Repeat Loops
+//like do while loop in java
+//instead repeat is keyword
+
+
 
 
 
