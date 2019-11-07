@@ -479,7 +479,57 @@ func doubleInPlace(number: inout Int) {
 var myNum = 10 
 doubleInPlace(number: &myNum)
 
-//Day 6: 
+//Day 6: Closures
+//creating a function and assigning it to a variable
+Import UIKit
+
+let driving = {
+    print("I'm driving in my car")
+}
+
+driving()
+
+//Accepting Parameters in Closures
+//parameters are listed inside the open braces in closures
+//use keyword in
+
+Import UIKit
+let driving = { (place: String) in
+    print("I'm going to \(place) in my car")
+}
+
+//dont use parameter labels when running closures
+
+driving("London")
+
+//Returning Values from a Closure
+//need to use -> String before in, then use return just like a normal function
+
+Import UIKit
+let drivingWithReturn = { (place: String) -> String in
+    return "I'm going to \(place) in my car"
+}
+
+let message = drivingWithReturn("London")
+print(message)
+
+//Closures as Parameters
+//you can pass closures in parameters
+//first specify the parameter type as () -> Void
+
+Import UIKit
+func travel(action: () -> Void) {
+    print("I'm getting ready to go.")
+    action()
+    print("I arrived!")
+}
+
+//can now call the function with the closure as a parameter
+
+travel(action: driving)
+
+//Trailing Closure Syntax
+
 
 
 
