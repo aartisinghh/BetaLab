@@ -2,10 +2,8 @@
 
 import UIKit
 import WebKit
-
 class ViewController: UIViewController, WKNavigationDelegate { //inherits and promises to implement
-    var webView: WKWebView!
-    
+    var webView: WKWebView!  
     override func loadView() {
         webView = WKWebView()
         webView.navigationDelegate = self
@@ -13,10 +11,8 @@ class ViewController: UIViewController, WKNavigationDelegate { //inherits and pr
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
+        super.viewDidLoad()        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Open", style: .plain, target: self, action: #selector(openTapped))
-        
         // Do any additional setup after loading the view.
         let url = URL(string: "https://www.hackingwithswift.com")!
         webView.load(URLRequest(url: url))
